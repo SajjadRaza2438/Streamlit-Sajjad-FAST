@@ -15,11 +15,11 @@ st.set_page_config(layout="wide")
 st.title('Olympic History Dashboard')
 st.subheader('Project Data Tools and Techniques - Sajjad Raza | Kulsoom Farhan | Shahrukh Raza | Muneeba Ahmed')
 
+file1= "C:\\Users\\Home PC\\OneDrive\\Desktop\\DTT project\\athlete_events.csv"
+df1 = pd.read_csv('athlete_events.csv')
 
-df1 = pd.read_csv("C:\\Users\\Home PC\\OneDrive\\Desktop\\DTT project\\athlete_events.csv")
-
-
-df2 = pd.read_csv("C:\\Users\\Home PC\\OneDrive\\Desktop\\DTT project\\noc_regions.csv")
+file2= "C:\\Users\\Home PC\\OneDrive\\Desktop\\DTT project\\noc_regions.csv"
+df2 = pd.read_csv('noc_regions.csv')
 
 # merging the two table
 df = df1.merge(df2 , how="left" , on='NOC')
